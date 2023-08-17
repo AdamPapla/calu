@@ -1,6 +1,6 @@
 # Communication Avoiding LU Factorisation (CALU) on a 1d process grid  
 Adam Graham  
-17-08-23
+17-08-23  
 Based on the paper "CALU: A Communication Optimal LU Factorization Algorithm" by L.Grigori et. al.
 ****
 
