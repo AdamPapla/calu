@@ -34,10 +34,11 @@ or an indexed array for [0:n-1] that will track row pivoting
 - `b`: Block size for algorithms recursion  
 Returns an in place LU factorisation, where each process' local chunk now holds a section of the LU matrix. U is stored in
 diagonal and upper triangular entries of the global matrix. L is stored in lower triangular entries of global matrix.  
-The __random.c__ file can be readily used to generate binary files of random matrices A and b such that Ax=b. x is a constant vector of
-user defined value. Allows for LU factorisation to be quickly verified.
+The __random.c__ file can be readily used to generate binary files of random matrices _A_ and _b_ such that _Ax=b_. _x_ is a constant vector of
+user defined value. Allows for LU factorisation to be quickly verified.  
 The __main.c__ file can be readily used to test CALU on these generated matrices. However, the user must ensure that the 
 _n_ and _m_ values of the generated matrices specified in __random.c__ match those specified in **main.c**.
+Block size _b_ must be chosen such that each process has at least two blocks to avoid memory errors. 
 ## Function file Descriptions
 Function files are found in the __func__ directory. Doxygen documentation is provided, as well as in file commenting
 - __calcBlock.c__ Calculates load balancing of rows of matrix in blocks of b between processes. Accounts
