@@ -33,9 +33,9 @@ or an indexed array for [0:n-1] that will track row pivoting
 - `m`: Number of columns in matrix A
 - `b`: Block size for algorithms recursion  
 Returns an in place LU factorisation, where each process' local chunk now holds a section of the LU matrix. U is stored in
-diagonal and upper triangular entries of the global matrix. L is stored in lower triangular entries of global matrix.
-The __random.c__ file can be readily used to generate binary files of random matrices A and b such that Ax=b, with x being 
-a vector with a constant value of the users choosing.  
+diagonal and upper triangular entries of the global matrix. L is stored in lower triangular entries of global matrix.  
+The __random.c__ file can be readily used to generate binary files of random matrices A and b such that Ax=b. x is a constant vector of
+user defined value. Allows for LU factorisation to be quickly verified.
 The __main.c__ file can be readily used to test CALU on these generated matrices. However, the user must ensure that the 
 _n_ and _m_ values of the generated matrices specified in __random.c__ match those specified in **main.c**.
 ## Function file Descriptions
